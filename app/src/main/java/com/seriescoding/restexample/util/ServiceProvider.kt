@@ -6,7 +6,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class ServiceProvider private constructor() {
+object ServiceProvider {
 
     private val retrofit: Retrofit
 
@@ -33,7 +33,4 @@ class ServiceProvider private constructor() {
         return retrofit.create(service)
     }
 
-    companion object {
-        val instance = ServiceProvider()
-    }
 }
