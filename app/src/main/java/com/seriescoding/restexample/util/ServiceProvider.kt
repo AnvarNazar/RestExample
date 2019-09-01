@@ -23,6 +23,7 @@ class ServiceProvider private constructor() {
             .build()
 
         retrofit = Retrofit.Builder()
+            .baseUrl("https://jsonplaceholder.typicode.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(httpClient)
             .build()
