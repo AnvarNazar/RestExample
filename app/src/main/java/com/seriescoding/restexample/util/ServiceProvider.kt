@@ -25,6 +25,7 @@ object ServiceProvider {
         retrofit = Retrofit.Builder()
             .baseUrl("https://jsonplaceholder.typicode.com/")
             .addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(LiveDataCallAdapterFactory())
             .client(httpClient)
             .build()
     }
